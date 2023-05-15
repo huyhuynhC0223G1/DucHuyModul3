@@ -1,4 +1,5 @@
-create database bai1;
+create database qua_li_sinh_vien;
+use qua_li_sinh_vien;
 
 create table class(
 id int primary key,

@@ -1,8 +1,12 @@
-create database quan_li;
+create database case_study_quan_li;
+use case_study_quan_li;
 
 create table vi_tri(
 ma_vi_tri int primary key auto_increment,
 ten_vi_tri varchar(45));
+
+insert into vi_tri (ten_vi_tri)
+value ("Lễ tân"), ("Phục vụ"), ("Chuyên viên"), ("Giám sát"), ("Quản lý"), ("Giám đốc");
 
 create table trinh_do(
 ma_trinh_do int primary key auto_increment,
@@ -79,8 +83,20 @@ foreign key(ma_khach_hang) references khach_hang(ma_khach_hang),
 ma_dich_vu int,
 foreign key(ma_dich_vu) references dich_vu(ma_dich_vu));
 
+create table dich_vu_di_kem(
+ma_dich_vu_di_kem int primary key auto_increment,
+ten_dich_vu_di_kem varchar(45) not null,
+gia double not null,
+don_vi varchar(45) not null,
+trang_thai varchar(45));
 
-
+create table hop_dong_chi_tiet(
+ma_hop_dong_chi_tiet int primary key auto_increment,
+ma_hop_dong int,
+foreign key(ma_hop_dong) references hop_dong(ma_hop_dong),
+ma_dich_vu_di_kem int,
+foreign key(ma_dich_vu_di_kem) references dich_vu_di_kem(ma_dich_vu_di_kem),
+so_luong int);
 
 
 

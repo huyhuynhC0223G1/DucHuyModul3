@@ -1,5 +1,5 @@
-create database ss2_bai_1;
-use ss2_bai_1;
+create database ss2_quan_li_vat_tu;
+use ss2_quan_li_vat_tu;
 
 create table nha_cung_cap(
 ma_nha_cung_cap int primary key,

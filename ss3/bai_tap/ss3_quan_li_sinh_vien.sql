@@ -79,7 +79,7 @@ select name_student, name_subject, mark
 from student s
 join mark m on s.id_student = m.id_student
 join `subject` sub  on m.id_subject = sub.id_subject
-order by mark desc ;
+order by mark desc, s.name_student ;
        
 
 

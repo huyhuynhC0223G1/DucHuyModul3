@@ -1,0 +1,20 @@
+.row {
+    display: flex;
+}
+
+.row3{
+    float: left;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    height: 80px;
+}
+.row3_style{
+    background-color: #1e8bf3;
+}
+.footer{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    font-size: 30px;
+}

@@ -2,19 +2,27 @@
     display: flex;
 }
 
-.row3{
+.row4 {
+    display: block;
+    height: 800px;
+}
+
+.row3 {
     float: left;
     padding: 0;
     margin: 0;
     justify-content: center;
     height: 80px;
 }
-.row3_style{
+
+.row3_style {
     background-color: #1e8bf3;
 }
-.footer{
-    display: flex;
+
+.footer {
+    display: block;
     height: 50px;
-    justify-content: center;
+    text-align: center;
     font-size: 30px;
+    background-color: #c3d8e1;
 }

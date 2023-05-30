@@ -39,7 +39,6 @@ public class CalculateServlet extends HttpServlet {
         request.setAttribute("result", result);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("result.jsp");
         requestDispatcher.forward(request, response);
-
     }
 }
 

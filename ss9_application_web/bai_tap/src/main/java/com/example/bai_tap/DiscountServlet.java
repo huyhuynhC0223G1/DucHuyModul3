@@ -24,6 +24,6 @@ public class DiscountServlet extends HttpServlet {
         request.setAttribute("discount_amount", discountAmount);
         request.setAttribute("discount_price", discountPrice);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("result.jsp");
-        r.forward(request, response);
+        requestDispatcher.forward(request, response);
     }
 }

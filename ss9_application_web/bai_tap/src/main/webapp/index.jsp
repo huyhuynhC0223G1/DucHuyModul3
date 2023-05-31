@@ -5,7 +5,7 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<form method="post" action="/DiscountServlet">
+<form method="post" action="/discount-servlet">
     <label for = "product_description">
     Product Description:
     </label>

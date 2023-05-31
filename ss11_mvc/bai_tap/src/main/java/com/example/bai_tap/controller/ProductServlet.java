@@ -95,15 +95,15 @@ public class ProductServlet extends HttpServlet {
     private void editProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         Product productedit = productService.productById(id);
-        productedit.setId(id);
         String name = request.getParameter("name");
         productedit.setNameProduct(name);
         String price = request.getParameter("price");
-        productedit.setNameProduct(price);
+        productedit.setPrice(price);
         String describe = request.getParameter("describe");
-        productedit.setNameProduct(describe);
+        productedit.setDescribe(describe);
         String producer = request.getParameter("producer");
-        productedit.setNameProduct(producer);
+        productedit.setProducer(producer);
         productService.editProduct(id, productedit);
+        request.setAttribute("productedit",productedit);
     }
 }

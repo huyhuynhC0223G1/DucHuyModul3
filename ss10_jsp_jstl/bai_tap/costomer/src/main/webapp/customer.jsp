@@ -20,22 +20,22 @@
         <th>Địa chỉ</th>
         <th>Image</th>
     </tr>
-    <c:forEach items="${list}" var="list" varStatus="loop">
+    <c:forEach items="${list}" var="customer" varStatus="loop">
         <tr>
             <td>
                 <c:out value="${loop.count}"></c:out>
             </td>
             <td>
-                <c:out value="${list.name}"></c:out>
+                <c:out value="${customer.name}"></c:out>
             </td>
             <td>
-                <c:out value="${list.dayofbirth}"></c:out>
+                <c:out value="${customer.dayofbirth}"></c:out>
             </td>
             <td>
-                <c:out value="${list.address}"></c:out>
+                <c:out value="${customer.address}"></c:out>
             </td>
             <td>
-                <img style="width: 50px" src="<c:out value="${list.image}"></c:out>">
+                <img style="width: 50px" src="<c:out value="${customer.image}"></c:out>">
             </td>
         </tr>
     </c:forEach>

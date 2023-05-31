@@ -21,7 +21,7 @@ public class CustomerServlet extends HttpServlet {
         }
         switch (action) {
             case "create":
-                showCreateForm(request,response);
+                showCreateForm(request, response);
                 break;
             case "edit":
                 break;
@@ -30,7 +30,8 @@ public class CustomerServlet extends HttpServlet {
             case "view":
                 break;
             default:
-                listCustomers(request, response); break;
+                listCustomers(request, response);
+                break;
         }
     }
 
@@ -49,15 +50,16 @@ public class CustomerServlet extends HttpServlet {
             case "delete":
                 break;
             default:
+                listCustomers(request, response);
                 break;
         }
     }
-    private void listCustomers(HttpServletRequest request, HttpServletResponse response){
 
+    private void listCustomers(HttpServletRequest request, HttpServletResponse response) {
+        List<Customer> customers = customerService.findAll();
+        request.setAttribute("customers", customers);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("list.jsp");
         try {
-            List<Customer> customers = customerService.findAll();
-            request.setAttribute("customers", customers);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/customer/list.jsp");
             dispatcher.forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
@@ -65,26 +67,28 @@ public class CustomerServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
-    private void showCreateForm(HttpServletRequest request, HttpServletResponse response){
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/customer/create.jsp");
+
+    private void showCreateForm(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("create.jsp");
         try {
-            dispatcher.forward(request,response);
+            dispatcher.forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    private void createCustomer(HttpServletRequest request, HttpServletResponse response){
-        String name= request.getParameter("name");
-        String email= request.getParameter("email");
-        String address= request.getParameter("address");
-        int id = (int) (Math.random()*1000);
 
-        Customer customer =new Customer(id, name, email, address);
+    private void createCustomer(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String address = request.getParameter("address");
+        int id = (int) (Math.random() * 1000);
+
+        Customer customer = new Customer(id, name, email, address);
         this.customerService.save(customer);
-        RequestDispatcher dispatcher= request.getRequestDispatcher("customer/create.jsp");
-        request.setAttribute("message","New customer was created");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("create.jsp");
+        request.setAttribute("message", "New customer was created");
         try {
             dispatcher.forward(request, response);
         } catch (ServletException e) {

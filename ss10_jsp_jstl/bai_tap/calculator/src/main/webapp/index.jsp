@@ -5,7 +5,7 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<form method="post" action="/CalculateServlet">
+<form method="post" action="/calculate-servlet">
 <h2>Simple Calculator</h2>
 <table style="border: 1px black solid">
 <tr>

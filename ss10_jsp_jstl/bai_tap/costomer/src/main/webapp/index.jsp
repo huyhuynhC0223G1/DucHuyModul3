@@ -6,6 +6,6 @@
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 </head>
 <body>
-<a href="/CustomerServlet">Danh sách khách hàng</a>
+<a href="/customer-servlet">Danh sách khách hàng</a>
 </body>
 </html>

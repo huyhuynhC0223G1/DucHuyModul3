@@ -46,9 +46,8 @@
                 <input type="submit" value="Edit"></a>
             </td>
             <td>
-                <form method="post" action="/product?action=delete&id=${product.id}">
+                <a href= "/product?action=delete&id=${product.id}">
                 <input type="submit" value="Delete"></a>
-                </form>
             </td>
         </tr>
     </c:forEach>

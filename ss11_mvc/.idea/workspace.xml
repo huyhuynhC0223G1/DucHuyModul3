@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="46715abf-000c-4e46-8d7f-b9681e1f766f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../case_study_2/product_merch.html" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_2/product_merch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bai_tap/src/main/java/com/example/bai_tap/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/src/main/java/com/example/bai_tap/controller/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap/src/main/webapp/view/product/display.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/src/main/webapp/view/product/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/java/com/example/bai_tap/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/java/com/example/bai_tap/controller/UserServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +28,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -38,6 +44,8 @@
       <workItem from="1685607190819" duration="20000" />
       <workItem from="1685607338204" duration="19000" />
       <workItem from="1685633026741" duration="244000" />
+      <workItem from="1685633433704" duration="1131000" />
+      <workItem from="1685634597590" duration="19000" />
     </task>
     <servers />
   </component>
@@ -54,5 +62,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

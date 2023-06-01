@@ -47,7 +47,7 @@ public class UserServlet extends HttpServlet {
         String country = request.getParameter("country");
         List<User> userList = userService.selectUserByCountry(country);
         request.setAttribute("userList", userList);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/user/display.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/user/search.jsp");
         requestDispatcher.forward(request, response);
     }
 
@@ -79,7 +79,6 @@ public class UserServlet extends HttpServlet {
                 break;
             case "edit":
                 editUser(request, response);
-//                response.sendRedirect("/user-servlet");
                 break;
             default:
                 dislayFormUser(request, response);

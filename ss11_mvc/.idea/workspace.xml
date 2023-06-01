@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="46715abf-000c-4e46-8d7f-b9681e1f766f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/java/com/example/bai_tap/controller/UserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/java/com/example/bai_tap/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/java/com/example/bai_tap/repository/IUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/java/com/example/bai_tap/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/java/com/example/bai_tap/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/java/com/example/bai_tap/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/webapp/view/user/display.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_jdbc/thuc_hanh/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_jdbc/thuc_hanh/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_jdbc/thuc_hanh/src/main/java/com/example/thuc_hanh/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_jdbc/thuc_hanh/src/main/java/com/example/thuc_hanh/controller/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_jdbc/thuc_hanh/src/main/java/com/example/thuc_hanh/model/IUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_jdbc/thuc_hanh/src/main/java/com/example/thuc_hanh/repository/IUserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_jdbc/thuc_hanh/src/main/java/com/example/thuc_hanh/model/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_jdbc/thuc_hanh/src/main/java/com/example/thuc_hanh/repository/UserDAO.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2Qb0tgUO4gHgxLtOJ4VQscwTMRq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ss12_jdbc/bai_tap" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46715abf-000c-4e46-8d7f-b9681e1f766f" name="Changes" comment="" />
+      <created>1685607189379</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685607189379</updated>
+      <workItem from="1685607190819" duration="20000" />
+      <workItem from="1685607338204" duration="19000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

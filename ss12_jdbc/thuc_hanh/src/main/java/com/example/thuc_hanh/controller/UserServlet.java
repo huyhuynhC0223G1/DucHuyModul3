@@ -2,7 +2,7 @@ package com.example.thuc_hanh.controller;
 
 
 import com.example.thuc_hanh.model.User;
-import com.example.thuc_hanh.model.UserDAO;
+import com.example.thuc_hanh.repository.UserDAO;
 
 import java.io.IOException;
 import java.sql.SQLException;

@@ -89,6 +89,7 @@ public class UserServlet extends HttpServlet {
                 break;
             case "edit":
                 editUser(request, response);
+//                response.sendRedirect("/user-servlet");
                 break;
             default:
                 dislayFormUser(request, response);

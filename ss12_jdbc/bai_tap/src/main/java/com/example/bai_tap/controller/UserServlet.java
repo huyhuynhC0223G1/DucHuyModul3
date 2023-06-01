@@ -69,7 +69,7 @@ public class UserServlet extends HttpServlet {
     private void dislayFormUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<User> userList = userService.showAll();
         request.setAttribute("userList", userList);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/user/display.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/user/list.jsp");
         requestDispatcher.forward(request, response);
     }
 

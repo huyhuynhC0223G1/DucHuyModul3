@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46715abf-000c-4e46-8d7f-b9681e1f766f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/java/com/example/bai_tap/controller/UserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/java/com/example/bai_tap/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/java/com/example/bai_tap/repository/IUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/java/com/example/bai_tap/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/java/com/example/bai_tap/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/java/com/example/bai_tap/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/webapp/view/user/display.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss12_jdbc/thuc_hanh/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_jdbc/thuc_hanh/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss12_jdbc/thuc_hanh/src/main/java/com/example/thuc_hanh/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_jdbc/thuc_hanh/src/main/java/com/example/thuc_hanh/controller/UserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss12_jdbc/thuc_hanh/src/main/java/com/example/thuc_hanh/model/IUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_jdbc/thuc_hanh/src/main/java/com/example/thuc_hanh/repository/IUserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss12_jdbc/thuc_hanh/src/main/java/com/example/thuc_hanh/model/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_jdbc/thuc_hanh/src/main/java/com/example/thuc_hanh/repository/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/src/main/java/com/example/bai_tap/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/src/main/java/com/example/bai_tap/controller/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/src/main/webapp/view/product/display.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/src/main/webapp/view/product/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/java/com/example/bai_tap/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_jdbc/bai_tap/src/main/java/com/example/bai_tap/controller/UserServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +25,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ss12_jdbc/bai_tap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -44,10 +37,22 @@
       <updated>1685607189379</updated>
       <workItem from="1685607190819" duration="20000" />
       <workItem from="1685607338204" duration="19000" />
+      <workItem from="1685633026741" duration="244000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

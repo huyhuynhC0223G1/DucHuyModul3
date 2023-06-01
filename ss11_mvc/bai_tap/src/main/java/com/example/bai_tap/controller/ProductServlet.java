@@ -23,10 +23,6 @@ public class ProductServlet extends HttpServlet {
             case "add":
                 showFormCreate(request, response);
                 break;
-            case "delete":
-                deleteProduct(request, response);
-                response.sendRedirect("/product");
-                break;
             case "edit":
                 showEditProduct(request, response);
                 break;
@@ -44,11 +40,6 @@ public class ProductServlet extends HttpServlet {
         requestDispatcher.forward(request, response);
     }
 
-    private void deleteProduct(HttpServletRequest request, HttpServletResponse response) {
-        int id = Integer.parseInt(request.getParameter("id"));
-        productService.deleteProduct(id);
-    }
-
     private void showFormCreate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/product/create.jsp");
         requestDispatcher.forward(request, response);
@@ -57,7 +48,7 @@ public class ProductServlet extends HttpServlet {
     private void display(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Product> productList = productService.showAll();
         request.setAttribute("productList", productList);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/product/display.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/product/list.jsp");
         requestDispatcher.forward(request, response);
     }
 
@@ -74,6 +65,10 @@ public class ProductServlet extends HttpServlet {
                 break;
             case "edit":
                 editProduct(request, response);
+                response.sendRedirect("/product");
+                break;
+            case "delete":
+                deleteProduct(request, response);
                 response.sendRedirect("/product");
                 break;
             default:
@@ -104,5 +99,9 @@ public class ProductServlet extends HttpServlet {
         String producer = request.getParameter("producer");
         productedit.setProducer(producer);
         productService.editProduct(id, productedit);
+    }
+    private void deleteProduct(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        productService.deleteProduct(id);
     }
 }

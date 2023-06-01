@@ -164,11 +164,11 @@ public class UserRepository implements IUserRepository {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }finally {
-//            try {
-//                connection.close();
-//            } catch (SQLException e) {
-//                e.printStackTrace();
-//            }
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return userByCountry;
     }

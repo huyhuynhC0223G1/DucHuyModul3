@@ -15,7 +15,7 @@
 <h1>User Management</h1>
     <a href="/user-servlet?action=add">Add new User</a><br>
 <br>
-<form method="get" action="//user-servlet?action=search">
+<form method="get" action="/user-servlet?action=search">
     <input type="text" name="country" id="country">
     <input type="submit" value="Search"></a>
 </form>

@@ -11,8 +11,7 @@ public interface IUserRepository {
     void deleteUser(int id);
 
     void editUser(User user);
-
-    void searchUser(int id);
     User selectUserId(int id);
-    List<User> selectUserByCountry(String country);
+    List<User> searchUserByCountry(String country);
+    List<User> sortUserByName();
 }

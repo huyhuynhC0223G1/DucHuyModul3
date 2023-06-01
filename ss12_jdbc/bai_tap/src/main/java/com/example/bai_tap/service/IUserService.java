@@ -12,6 +12,7 @@ public interface IUserService {
 
     void editUser(User user);
 
-    List<User> selectUserByCountry(String country);
+    List<User> searchUserByCountry(String country);
+    List<User> sortByName();
     User selectUserId(int id);
 }

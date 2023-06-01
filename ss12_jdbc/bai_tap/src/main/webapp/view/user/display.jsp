@@ -13,13 +13,14 @@
 </head>
 <body>
 <h1>User Management</h1>
-    <a href="/user-servlet?action=add">Add new User</a>
+    <a href="/user-servlet?action=add">Add new User</a><br>
 <br>
 <form method="get" action="//user-servlet?action=search">
-    <input type="hidden" name="country" value="search" >
-    <input type="text" name="country" id="search">
+    <input type="text" name="country" id="country">
     <input type="submit" value="Search"></a>
 </form>
+<br>
+<a href="/user-servlet?action=sort">List sorted by name</a>
 <table border="1">
     <caption><h2>List of Users</h2></caption>
     <tr>

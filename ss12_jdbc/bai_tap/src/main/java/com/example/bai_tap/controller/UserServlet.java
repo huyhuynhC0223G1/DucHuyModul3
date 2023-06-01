@@ -29,10 +29,20 @@ public class UserServlet extends HttpServlet {
             case "search":
                 searchUserByCountry(request, response);
                 break;
+            case "sort":
+                sortByName(request, response);
+                break;
             default:
                 dislayFormUser(request, response);
                 break;
         }
+    }
+
+    private void sortByName(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        List<User> userList = userService.sortByName();
+        request.setAttribute("userList", userList);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/user/sort.jsp");
+        requestDispatcher.forward(request, response);
     }
 
     private void showEditUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -45,7 +55,7 @@ public class UserServlet extends HttpServlet {
 
     private void searchUserByCountry(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String country = request.getParameter("country");
-        List<User> userList = userService.selectUserByCountry(country);
+        List<User> userList = userService.searchUserByCountry(country);
         request.setAttribute("userList", userList);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/user/search.jsp");
         requestDispatcher.forward(request, response);

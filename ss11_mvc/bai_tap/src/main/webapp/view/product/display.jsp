@@ -12,6 +12,7 @@
     <title>Title</title>
 </head>
 <body>
+
 <p>
 <a href="/product?action=add">Thêm mới sản phẩm</a>
 </p>
@@ -51,5 +52,6 @@
         </tr>
     </c:forEach>
 </table>
+
 </body>
 </html>

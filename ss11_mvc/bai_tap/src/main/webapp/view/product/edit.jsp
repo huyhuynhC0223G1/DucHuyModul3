@@ -22,24 +22,19 @@
         </tr>
         <tr>
             <td>
-                <label>${product.id}</label>
-                <input type="text" name="id" id="id">
+                <input type="text" name="id" id="id" value="${product.id}">
             </td>
             <td>
-                <label>${product.nameProduct}</label>
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name" value="${product.nameProduct}">
             </td>
             <td>
-                <label>${product.price}</label>
-                <input type="text" name="price" id="price">
+                <input type="text" name="price" id="price" value="${product.price}">
             </td>
             <td>
-                <label>${product.describe}</label>
-                <input type="text" name="describe" id="describe">
+                <input type="text" name="describe" id="describe" value="${product.describe}">
             </td>
             <td>
-                <label>${product.producer}</label>
-                <input type="text" name="producer" id="producer">
+                <input type="text" name="producer" id="producer" value="${product.producer}">
             </td>
             <td>
                 <input type="submit" value="Confirm">

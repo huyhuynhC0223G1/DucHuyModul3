@@ -104,6 +104,5 @@ public class ProductServlet extends HttpServlet {
         String producer = request.getParameter("producer");
         productedit.setProducer(producer);
         productService.editProduct(id, productedit);
-        request.setAttribute("productedit",productedit);
     }
 }

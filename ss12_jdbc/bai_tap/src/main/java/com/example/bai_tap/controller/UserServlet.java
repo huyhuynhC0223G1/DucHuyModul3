@@ -1,6 +1,7 @@
 package com.example.bai_tap.controller;
 
 import com.example.bai_tap.model.User;
+import com.example.bai_tap.service.IUserService;
 import com.example.bai_tap.service.UserService;
 
 import javax.servlet.*;
@@ -11,7 +12,7 @@ import java.util.List;
 
 @WebServlet(name = "UserServlet", value = "/user-servlet")
 public class UserServlet extends HttpServlet {
-    private UserService userService = new UserService();
+    private IUserService userService = new UserService();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

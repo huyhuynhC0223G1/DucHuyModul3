@@ -1,12 +1,13 @@
 package com.example.bai_tap.service;
 
 import com.example.bai_tap.model.User;
+import com.example.bai_tap.repository.IUserRepository;
 import com.example.bai_tap.repository.UserRepository;
 
 import java.util.List;
 
 public class UserService implements IUserService {
-    private UserRepository userRepository = new UserRepository();
+    private IUserRepository userRepository = new UserRepository();
 
     @Override
     public List<User> showAll() {

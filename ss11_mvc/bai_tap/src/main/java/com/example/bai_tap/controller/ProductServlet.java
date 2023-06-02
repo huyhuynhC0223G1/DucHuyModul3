@@ -11,7 +11,7 @@ import java.util.List;
 
 @WebServlet(name = "ProductServlet", value = "/product")
 public class ProductServlet extends HttpServlet {
-    private IProductService iProductService = new IProductService();
+    private IProductService productService = new ProductService();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -37,7 +37,7 @@ public class ProductServlet extends HttpServlet {
 
     private void showEditProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        Product product = iProductService.productById(id);
+        Product product = productService.productById(id);
         request.setAttribute("product", product);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/product/edit.jsp");
         requestDispatcher.forward(request, response);
@@ -49,14 +49,14 @@ public class ProductServlet extends HttpServlet {
     }
     private void showFormDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        Product product = iProductService.productById(id);
+        Product product = productService.productById(id);
         request.setAttribute("product", product);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/product/delete.jsp");
         requestDispatcher.forward(request, response);
     }
 
     private void display(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Product> productList = iProductService.showAll();
+        List<Product> productList = productService.showAll();
         request.setAttribute("productList", productList);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/product/list.jsp");
         requestDispatcher.forward(request, response);
@@ -94,12 +94,12 @@ public class ProductServlet extends HttpServlet {
         String describe = request.getParameter("describe");
         String producer = request.getParameter("producer");
         Product product = new Product(id, name, price, describe, producer);
-        iProductService.addNewProduct(product);
+        productService.addNewProduct(product);
     }
 
     private void editProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        Product productedit = iProductService.productById(id);
+        Product productedit = productService.productById(id);
         String name = request.getParameter("name");
         productedit.setNameProduct(name);
         String price = request.getParameter("price");
@@ -108,10 +108,10 @@ public class ProductServlet extends HttpServlet {
         productedit.setDescribe(describe);
         String producer = request.getParameter("producer");
         productedit.setProducer(producer);
-        iProductService.editProduct(id, productedit);
+        productService.editProduct(id, productedit);
     }
     private void deleteProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        iProductService.deleteProduct(id);
+        productService.deleteProduct(id);
     }
 }

@@ -6,7 +6,7 @@ import com.example.bai_tap.repository.ProductRepository;
 import java.util.List;
 
 public class ProductService implements IProductService{
-    private ProductRepository productRepository =new ProductRepository();
+    private IProductRepository productRepository =new ProductRepository();
     @Override
     public List<Product> showAll() {
         List<Product> productList = productRepository.showAll();

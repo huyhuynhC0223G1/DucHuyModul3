@@ -12,12 +12,12 @@ public class Product {
     private String productDescription;
     private double price;
     private String image;
-    private int productTypeId;
+    private ProductType productTypeId;
 
     public Product() {
     }
 
-    public Product(String productName, String productDescription, double price, String image, int productTypeId) {
+    public Product(String productName, String productDescription, double price, String image, ProductType productTypeId) {
         this.productName = productName;
         this.productDescription = productDescription;
         this.price = price;
@@ -25,7 +25,8 @@ public class Product {
         this.productTypeId = productTypeId;
     }
 
-    public Product(int productId, String productName, String productDescription, double price, String image, int productTypeId) {
+    public Product(int productId, String productName, String productDescription, double price, String image,
+                   ProductType productTypeId) {
         this.productId = productId;
         this.productName = productName;
         this.productDescription = productDescription;
@@ -74,11 +75,11 @@ public class Product {
         this.image = image;
     }
 
-    public int getProductTypeId() {
+    public ProductType getProductTypeId() {
         return productTypeId;
     }
 
-    public void setProductTypeId(int productTypeId) {
+    public void setProductTypeId(ProductType productTypeId) {
         this.productTypeId = productTypeId;
     }
 }

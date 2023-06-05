@@ -7,6 +7,7 @@ import java.util.List;
 public interface IProductRepository {
     List<Product> showAll();
     void createNewProduct(Product product);
-    void updateProduct(int id);
+    void updateProduct(Product product);
     void deleteProduct(int id);
+    Product selectProductById(int id);
 }

@@ -10,8 +10,45 @@
 <html>
 <head>
     <title>Title</title>
+    <c:import url="/view/navbar.jsp"></c:import>
 </head>
 <body>
+<a href="/view/product/list.jsp">Back</a>
 
+<div class="d-flex" style="justify-content: space-between">
+    <form method="post" action="/product?action=create" class="row row-cols-lg-auto g-3 align-items-center">
+        <div class="col-12 mb-3">
+            <input name="name" type="text" class="form-control" id="formGroupExampleInput"
+                   placeholder="Product's name">
+        </div>
+        <div class="col-12 col-auto form-check mb-3">
+            <input name="description" type="text" class="form-control"
+                   placeholder="Product Description">
+        </div>
+        <div class="col-12 mb-3">
+            <div class="input-group ">
+                <input name="price" type="text" class="form-control" placeholder="Product price">
+                <span class="input-group-text">€</span>
+            </div>
+        </div>
+        <div class="col-12 ">
+            <div class="input-group mb-3">
+                <input name="image" type="file" class="form-control" id="inputGroupFile02">
+                <label class="input-group-text" for="inputGroupFile02">Image</label>
+            </div>
+        </div>
+        <div class="col-12 col-auto form-check mb-3">
+            <select name="productType" class="form-select" aria-label="Default select example">
+                <option value="0">Product Type</option>
+                <c:forEach var="productType" items="${productTypeList}">
+                    <option value="${productType.productTypeId}">${productType.productTypeName}</option>
+                </c:forEach>
+            </select>
+        </div>
+        <div class="col-12 mb-3">
+            <button type="submit" class="btn btn-primary bg-black text-white">Add new products</button>
+        </div>
+    </form>
+</div>
 </body>
 </html>

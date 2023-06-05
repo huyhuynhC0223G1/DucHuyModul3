@@ -9,23 +9,29 @@ import java.util.List;
 
 public class ProductService implements IProductService {
     private IProductRepository iProductRepository = new ProductRepository();
-        @Override
-        public List<Product> showAll() {
-            return iProductRepository.showAll();
-        }
 
-        @Override
-        public void createNewProduct(Product product) {
+    @Override
+    public List<Product> showAll() {
+        return iProductRepository.showAll();
+    }
 
-        }
+    @Override
+    public void createNewProduct(Product product) {
+        iProductRepository.createNewProduct(product);
+    }
 
-        @Override
-        public void updateProduct(int id) {
+    @Override
+    public void updateProduct(Product product) {
+        iProductRepository.updateProduct(product);
+    }
 
-        }
+    @Override
+    public void deleteProduct(int id) {
+        iProductRepository.deleteProduct(id);
+    }
 
-        @Override
-        public void deleteProduct(int id) {
-
-        }
+    @Override
+    public Product selectProductById(int id) {
+        return iProductRepository.selectProductById(id);
+    }
 }

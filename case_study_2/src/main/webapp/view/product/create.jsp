@@ -13,7 +13,14 @@
     <c:import url="/view/navbar.jsp"></c:import>
 </head>
 <body>
-<a href="/view/product/list.jsp">Back</a>
+<a href="/product">
+    <button type="submit" class="btn btn-primary bg-black text-white">Back</button>
+</a><br><br>
+<h2 id="success">
+    <c:if test="${requestScope['message'] != null}">
+        <span style="color: green"><i class="fa-solid fa-square-check"></i>${requestScope['message']}</span>
+    </c:if>
+</h2>
 
 <div class="d-flex" style="justify-content: space-between">
     <form method="post" action="/product?action=create" class="row row-cols-lg-auto g-3 align-items-center">
@@ -27,13 +34,13 @@
         </div>
         <div class="col-12 mb-3">
             <div class="input-group ">
-                <input name="price" type="text" class="form-control" placeholder="Product price">
+                <input name="price" type="number" class="form-control" placeholder="Product price">
                 <span class="input-group-text">€</span>
             </div>
         </div>
         <div class="col-12 ">
             <div class="input-group mb-3">
-                <input name="image" type="file" class="form-control" id="inputGroupFile02">
+                <input name="image" type="text" class="form-control" id="inputGroupFile02" value="/view/images/x.png">
                 <label class="input-group-text" for="inputGroupFile02">Image</label>
             </div>
         </div>
@@ -50,5 +57,10 @@
         </div>
     </form>
 </div>
+<script>
+    setTimeout(function () {
+        document.getElementById("success").style.display = "none";
+    }, 1000)
+</script>
 </body>
 </html>

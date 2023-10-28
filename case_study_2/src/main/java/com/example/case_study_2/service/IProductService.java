@@ -10,4 +10,6 @@ public interface IProductService {
     void updateProduct(Product product);
     void deleteProduct(int id);
     Product selectProductById(int id);
+    List<Product> showAllMerch();
+    List<Product> showAllMusic();
 }

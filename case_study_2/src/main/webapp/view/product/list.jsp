@@ -17,7 +17,8 @@
             integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
             crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../../bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap520/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="datatables/css/dataTables.bootstrap5.min.css"/>
     <c:import url="/view/navbar.jsp"></c:import>
 </head>
 <body>
@@ -28,6 +29,13 @@
                     Add new products</button></a>
             </div>
     </div>
+    <div>
+        <h2>
+            <c:if test="${requestScope['message'] != null}">
+                <span style="color: blue">${requestScope['message']}</span>
+            </c:if>
+        </h2>
+    </div>
     <%--    table--%>
     <div class="d-flex">
         <h2>List of products </h2>
@@ -36,7 +44,7 @@
             <button class="btn btn-outline-success bg-black text-white" type="submit">Search</button>
         </form>
     </div>
-    <table class="table table-bordered">
+    <table class="table table-bordered" id="tableOrder">
         <thead class="table-dark ">
         <tr>
             <th scope="col">STT</th>
@@ -75,13 +83,15 @@
                     <c:out value="${product.productTypeId.productTypeName}"></c:out>
                 </td>
                 <td>
-                    <a href="/product?action=edit&id=${product.productId}"><button type="button" class="btn btn-primary">Edit</button></a>
+                    <a href="/product?action=edit&id=${product.productId}">
+                        <button type="button" class="btn btn-primary">
+                            <i class="fa-solid fa-pen-to-square"></i></button></a>
                 </td>
                 <td>
-                    <button type="button" class="btn btn-primary"
+                    <button type="button" class="btn btn-primary" style="background-color: red"
                             data-bs-toggle="modal" data-bs-target="#exampleModal"
                             onclick="remove(${product.productId},'${product.productName}')">
-                        Delete
+                        <i class="fa-solid fa-trash-can"></i>
                     </button>
                 </td>
             </tr
@@ -124,7 +134,7 @@
                 </h3>
             </div>
             <div class="modal-footer">
-                <form action="/product?action=delete&&productId=${product.productId}" method="post">
+                <form action="/product?action=delete" method="post">
                     <input type="hidden" name="idDelete" id="idDelete">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
                     <button type="submit" class="btn btn-primary">Yes</button>
@@ -137,20 +147,21 @@
 <script src="jquery/jquery-3.5.1.min.js"></script>
 <script src="datatables/js/jquery.dataTables.min.js"></script>
 <script src="datatables/js/dataTables.bootstrap5.min.js"></script>
-<script src="bootstrap520/js/bootstrap.bundle.js"></script>
 <script>
     $(document).ready(function () {
-        $('#tableStudent').dataTable({
+        $('#tableOrder').dataTable({
             "dom": 'lrtip',
             "lengthChange": false,
-            "pageLength": 2
+            "pageLength": 5
         });
     });
 
-    function remove(id, name) {
+    function remove(productId, productName) {
         document.getElementById("nameDelete").innerText = productName;
         document.getElementById("idDelete").value = productId;
     }
+
 </script>
+<script src="bootstrap520/js/bootstrap.bundle.js"></script>
 </body>
 </html>

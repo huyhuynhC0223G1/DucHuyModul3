@@ -13,12 +13,20 @@
     <c:import url="/view/navbar.jsp"></c:import>
 </head>
 <body>
-<a href="/view/product/list.jsp">Back</a>
-${productById}
+<a href="/product"><button type="submit" class="btn btn-primary bg-black text-white">Back</button></a><br>
+<h2 id="success">
+    <c:if test="${requestScope['message'] != null}">
+    <span style="color: green"><i class="fa-solid fa-square-check"></i>${requestScope['message']}</span>
+    </c:if>
+</h2>
+
 <div class="d-flex" style="justify-content: space-between">
-    <form method="post" action="/product?action=create" class="row row-cols-lg-auto g-3 align-items-center">
+    <form method="post" action="/product?action=edit" class="row row-cols-lg-auto g-3 align-items-center">
         <div class="col-12 mb-3">
-            <input value="${productById.productName}" name="name" type="text" class="form-control" id="formGroupExampleInput"
+            <input hidden value="${productById.productId}" name="id" type="text" class="form-control" id="formGroupExampleInput">
+        </div>
+        <div class="col-12 mb-3">
+            <input value="${productById.productName}" name="name" type="text" class="form-control"
                    placeholder="Product's name">
         </div>
         <div class="col-12 col-auto form-check mb-3">
@@ -33,13 +41,12 @@ ${productById}
         </div>
         <div class="col-12 ">
             <div class="input-group mb-3">
-                <input value="${productById.image}" name="image" type="file" class="form-control" id="inputGroupFile02">
-                <label class="input-group-text" for="inputGroupFile02">Image</label>
+                <input value="${productById.image}" name="image" type="text" class="form-control" >
+                <label class="input-group-text" >Image</label>
             </div>
         </div>
         <div class="col-12 col-auto form-check mb-3">
             <select name="productType" class="form-select" aria-label="Default select example">
-                <option value="0">Product Type</option>
                 <c:forEach var="productType" items="${productTypeList}">
                     <option value="${productType.productTypeId}">${productType.productTypeName}</option>
                 </c:forEach>
@@ -50,5 +57,10 @@ ${productById}
         </div>
     </form>
 </div>
+<script>
+    setTimeout(function () {
+        document.getElementById("success").style.display = "none";
+    },1000)
+</script>
 </body>
 </html>
